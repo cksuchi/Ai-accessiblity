@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Accessibility Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+  <h1>♿ AI Accessibility</h1>
+
+  <!-- 🔍 AI: Scout Auditor -->
+  <div class="feature-group">
+    <h4>🔍 Scout Auditor</h4>
+    <div class="description">Flags missing alt-text &amp; complex text on page load</div>
+    <button class="access-btn" id="scout-btn">🔍 Re-run Scout Audit</button>
+    <div id="scout-status" class="status-text"></div>
+  </div>
+
+  <!-- 🤖 AI: Image Captioning -->
+  <div class="feature-group">
+    <h4>🖼 Image Captioning</h4>
+    <div class="description">Auto-generate alt-text for images missing descriptions</div>
+    <button class="access-btn" id="caption-btn">🤖 Caption All Images</button>
+    <div id="caption-status" class="status-text"></div>
+  </div>
+
+  <!-- 🧠 AI: Text Simplification -->
+  <div class="feature-group">
+    <h4>📝 Text Simplification</h4>
+    <div class="description">Convert complex text to plain, easy-to-read language</div>
+    <button class="access-btn" id="simplify-btn">🧠 Simplify Page Text</button>
+    <button class="access-btn secondary" id="restore-text-btn" style="display:none">↩ Restore Original</button>
+    <div id="simplify-status" class="status-text"></div>
+  </div>
+
+  <!-- 🎤 Voice Navigation -->
+  <div class="feature-group">
+    <h4>🎤 Voice Navigation</h4>
+    <div class="description">Hands-free page control with voice commands</div>
+    <button class="access-btn" id="voice-nav-btn">🎙 Start Voice Navigation</button>
+    <div id="voice-nav-status" class="status-text"></div>
+    <div class="hint-box" id="voice-hint" style="display:none">
+      <strong>Commands:</strong><br>
+      "scroll down / up" · "go back / forward"<br>
+      "read page" · "stop reading" · "zoom in / out"<br>
+      "click [link text]" · "fill form" · "stop"
+    </div>
+  </div>
+
+  <!-- 🎤 Voice Form Filling -->
+  <div class="feature-group">
+    <h4>📋 Voice Form Filling</h4>
+    <div class="description">Fill forms using voice</div>
+    <button id="voice-fill-btn">🎙 Start Voice Form Filling</button>
+  </div>
+
+  <!-- 🎬 Video Controls -->
+  <div class="feature-group">
+    <h4>🎬 Video Controls</h4>
+    <div class="description">Control videos instantly</div>
+    <div class="video-grid">
+      <button data-video-command="play" class="video-btn">▶ Play</button>
+      <button data-video-command="pause" class="video-btn">⏸ Pause</button>
+      <button data-video-command="rewind" class="video-btn">⏪ Rewind</button>
+      <button data-video-command="forward" class="video-btn">⏩ Forward</button>
+    </div>
+  </div>
+
+  <!-- 👁 Visual Accessibility -->
+  <div class="feature-group">
+    <h4>👁 Visual Filters</h4>
+    <button class="access-btn" id="contrast-btn">🌓 High Contrast</button>
+    <button class="access-btn" id="dyslexia-btn">📖 Dyslexia Mode</button>
+    <button class="access-btn" id="protanopia-btn">🔴 Protanopia</button>
+    <button class="access-btn" id="deuteranopia-btn">🟢 Deuteranopia</button>
+    <button class="access-btn" id="text-btn">🔍 Increase Text</button>
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>

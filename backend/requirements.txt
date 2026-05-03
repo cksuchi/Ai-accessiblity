@@ -1,0 +1,26 @@
+# ── Core web server (REQUIRED) ────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+
+# ── ML — classifier (strongly recommended, < 1 s install) ────────────────────
+numpy>=1.24
+scikit-learn>=1.4
+
+# ── NLP / Vision — simplification + local BLIP fallback ──────────────────────
+# These are only used if the HF API is unreachable.
+# Comment them out to make installation faster.
+transformers==4.44.2
+sentencepiece==0.2.0
+Pillow==10.3.0
+torch==2.4.0
+torchvision==0.19.0
+accelerate>=0.26.0
+
+# ── INT8 quantization — CUDA GPU only ────────────────────────────────────────
+# Uncomment ONLY if you have an NVIDIA GPU with CUDA.
+# The server handles its absence gracefully (falls back to FP32).
+# bitsandbytes>=0.43.0
+
+# NOTE: httpx is NOT required. The backend now uses Python's built-in
+# urllib for all HTTP calls — zero extra dependencies for networking.
